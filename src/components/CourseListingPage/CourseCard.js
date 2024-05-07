@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const CourseCard = ({ course }) => {
   return (
@@ -28,6 +29,7 @@ const CourseCard = ({ course }) => {
           ))}
         </ul>
       </div>
+      <Link to={`/course/${course.id}`} className="text-blue-500 hover:underline">View Details</Link>
     </div>
   );
 };
