@@ -3,11 +3,11 @@ import { useSelector, useDispatch } from 'react-redux';
 import { fetchCourses } from '../../store/actions/courseActions';
 import CourseCard from './CourseCard';
 import './CourseListingPage.css';
+import { Link } from 'react-router-dom';
 
 const CourseListingPage = () => {
   const dispatch = useDispatch();
   const courses = useSelector(state => state.courses);
-  console.log(courses);
   const [searchTerm, setSearchTerm] = useState('');
 
   useEffect(() => {
@@ -21,6 +21,11 @@ const CourseListingPage = () => {
 
   return (
     <div className="container mx-auto px-4 py-8">
+    <div className='py-4 w-fit mx-auto'>
+      <Link to="/dashboard" className="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-md transition duration-300 ease-in-out">
+        Go to Dashboard
+      </Link>
+    </div>
       <input
         type="text"
         placeholder="Search courses..."

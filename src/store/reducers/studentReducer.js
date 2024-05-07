@@ -1,33 +1,14 @@
-import { ENROLL_COURSE, MARK_COURSE_COMPLETED } from '../actionTypes';
+import { FETCH_COURSES_SUCCESS } from '../actionTypes';
 
-const initialState = {
-  enrolledCourses: [],
-};
+const initialState = [];
 
-const studentReducer = (state = initialState, action) => {
+const courseReducer = (state = initialState, action) => {
   switch (action.type) {
-    case ENROLL_COURSE:
-      return {
-        ...state,
-        enrolledCourses: [...state.enrolledCourses, action.payload],
-      };
-    case MARK_COURSE_COMPLETED:
-      const { courseId } = action.payload;
-      return {
-        ...state,
-        enrolledCourses: state.enrolledCourses.map(course => {
-          if (course.id === courseId) {
-            return {
-              ...course,
-              completed: true,
-            };
-          }
-          return course;
-        }),
-      };
+    case FETCH_COURSES_SUCCESS:
+      return action.payload;
     default:
       return state;
   }
 };
 
-export default studentReducer;
+export default courseReducer;
