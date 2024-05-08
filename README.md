@@ -1,4 +1,22 @@
-# Getting Started with Create React App
+# Course Management System
+
+This is a simple web application for managing courses, including a course listing page, course details page, and a student dashboard. It allows users to view a list of available courses, see detailed information about each course, and access a dashboard to view enrolled courses.
+
+## Features
+
+- Course Listing Page: Display a list of available courses with basic information.
+- Course Details Page: View detailed information about a selected course.
+- Student Dashboard: Display enrolled courses for students with progress tracking.
+
+## Technologies Used
+
+- React: Frontend JavaScript library for building user interfaces.
+- React Router: Declarative routing for React applications.
+- Redux: State management library for managing application state.
+- Tailwind CSS: Utility-first CSS framework for styling.
+- Dummy Data: Sample course data is used for demonstration purposes.
+
+# How To Run
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
